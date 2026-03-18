@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タウマゼインな人々 - 登壇者データシート</title>
+    <style>
+        :root {
+            --bg-main: #333333;      /* 背景チャコールグレー */
+            --bg-dark: #1A1A1A;      /* サブ背景・カード内側 */
+            --accent-green: #00C885; /* アクセントグリーン */
+            --accent-pink: #D4A5A5;  /* 装飾用ピンク */
+            --text-white: #FFFFFF;   /* メインテキスト */
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-white);
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 60px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent-pink);
+        }
+
+        .header-category {
+            color: var(--accent-green);
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        /* カードの基本構造 */
+        .speaker-card {
+            background-color: var(--bg-dark);
+            margin-bottom: 40px;
+            padding: 40px;
+            position: relative;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            gap: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 左側のピンクアクセント */
+        .accent-line {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            bottom: 40px;
+            width: 3px;
+            background-color: var(--accent-pink);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid rgba(255,255,255,0.1);
+            flex-shrink: 0;
+            background-color: #222;
+        }
+
+        .speaker-info {
+            flex-grow: 1;
+        }
+
+        .category {
+            color: var(--accent-green);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .tags {
+            margin-bottom: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .quote-item {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 15px;
+        }
+
+        .quote-item::before {
+            content: "“";
+            position: absolute;
+            left: 0;
+            color: var(--accent-pink);
+            font-size: 1.8rem;
+            top: -8px;
+            font-family: serif;
+        }
+
+        .citation-small {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .speaker-card {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            .header-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-category">SYMPOSIUM REPORT</div>
+        <h1 class="header-title">発言集 〜 タウマゼインな人々 2026/2/11 〜</h1>
+    </header>
+
+    <div class="speaker-card">
+        <div class="accent-line"></div>
+        <img src="img/Arisu.png" alt="岡田 亜理寿" class="profile-img">
+        <div class="speaker-info">
+            <span class="category">KISSATEN / NURSE</span>
+            <div class="name">岡田 亜理寿</div>
+            <div class="tags">
+                <span class="tag">砂漠</span><span class="tag">喫茶店</span><span class="tag">手放し</span><span class="tag">顔の見える関係</span><span class="tag">ブリコラージュ</span>
+            </div>
+            <div class="description">
+                <div class="quote-item">「今の自分、どうにか変えたい」って思って、突然、砂漠に行ったんですよ </div>
+                <div class="quote-item">あ、私、安定した仕事とかお金だけで生きてたんじゃない、って気づいたんですよね </div>
+                <div class="quote-item">世界って結局、“思い合う関係”が増えたら変わるんじゃないかって </div>
+                <div class="quote-item">手に“プツプツ”来るやろ。やってみると、本当に手で分かるんです </div>
+                <div class="quote-item">知識を、優しく“喜ばせる方向”に使えるようになると、世界もっと面白くなりそう </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="accent-line"></div>
+        <img src="img/Shion.K.png" alt="久保田 しおん" class="profile-img">
+        <div class="speaker-info">
+            <span class="category">PHYSICS / NEUTRINO</span>
+            <div class="name">久保田 しおん</div>
+            <div class="tags">
+                <span class="tag">ニュートリノ</span><span class="tag">死からの逃避</span><span class="tag">フルート</span><span class="tag">整合性の美</span><span class="tag">命のバトン</span>
+            </div>
+            <div class="description">
+                <div class="quote-item">人類が何世代もかけて作ってきた長い交響曲に、自分も一瞬だけ参加してる感じ </div>
+                <div class="quote-item">フルートのために物理をやりたくなったのが入口でした </div>
+                <div class="quote-item">「死ぬ体」に対して「死なない意味」を探すのが文化活動 </div>
+                <div class="quote-item">応用だけ続くと、知識を生み出す“畑”が痩せていく。一次産業が枯れるのと同じ </div>
+                <div class="quote-item">「自分の楽しそうな姿を見て!」から入って、のちのちタウマゼインに結びついていく </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="accent-line"></div>
+        <img src="img/K.Watanabe.png" alt="渡邊 和樹" class="profile-img">
+        <div class="speaker-info">
+            <span class="category">PHILOSOPHY / NPO</span>
+            <div class="name">渡邊 和樹</div>
+            <div class="tags">
+                <span class="tag">空海</span><span class="tag">寺子屋</span><span class="tag">プロセスの反復</span><span class="tag">サードプレイス</span><span class="tag">秘密の出会い</span>
+            </div>
+            <div class="description">
+                <div class="quote-item">モデルの再現から、プロセスの反復へ </div>
+                <div class="quote-item">僕は「出会ってしまった」が大きいです </div>
+                <div class="quote-item">言葉で組み立てる哲学と、身体を通した実践が、ちゃんと一つに繋がっている </div>
+                <div class="quote-item">アートって、自分のコアにあるものを外に差し出す、投げ出す、みたいなこと </div>
+                <div class="quote-item">「この世界は、秘密の出会いに開かれている」って信じることはできる </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="accent-line"></div>
+        <img src="img/K.Kazama.png" alt="風間 健人" class="profile-img">
+        <div class="speaker-info">
+            <span class="category">STARTUP / CEO</span>
+            <div class="name">風間 健人</div>
+            <div class="tags">
+                <span class="tag">越境</span><span class="tag">境界の相対化</span><span class="tag">通過点としての死</span><span class="tag">自分への許し</span><span class="tag">CEOの土壌</span>
+            </div>
+            <div class="description">
+                <div class="quote-item">え、機会って、場所でこんなに違うの? っていうのが、最初の大きい発見でした </div>
+                <div class="quote-item">境界を越えるたびに見えるものが増えて、それが原動力になってきた </div>
+                <div class="quote-item">浄土真宗でよく言われる言葉の一つに、「今、いのちがあなたを生きている」 </div>
+                <div class="quote-item">タウマゼインが生まれる条件は、自分に許しを与えられた瞬間なのかな </div>
+                <div class="quote-item">CEOなんだから、とりあえず長い土壌に行け、と言われたりして </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="accent-line"></div>
+        <img src="img/Iwanami.png" alt="岩波 直樹" class="profile-img">
+        <div class="speaker-info">
+            <span class="category">MODERATOR / DESIGN</span>
+            <div class="name">岩波 直樹</div>
+            <div class="tags">
+                <span class="tag">創造の4象限</span><span class="tag">感覚派経営</span><span class="tag">正しさの限界</span><span class="tag">驚きの一歩</span><span class="tag">認識の外側</span>
+            </div>
+            <div class="description">
+                <div class="quote-item">湧き出る思いに身を投じて突き進む人が、世の中の空気をちょっとずつ変えていく </div>
+                <div class="quote-item">「花火上げようぜ」みたいな、感覚の一言で前に進むことがある </div>
+                <div class="quote-item">正しさが先行しすぎると、合理的には進むけど、どんどんつまんなくなる </div>
+                <div class="quote-item">アート・サイエンス・エンジニアリング・デザイン。この4つを回すのが創造なんだ </div>
+                <div class="quote-item">人生の時間としては、説明なしで「バーン」って来る場に、空いてたら行くのも大事 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
